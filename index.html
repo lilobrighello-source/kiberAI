@@ -913,10 +913,10 @@
           style="display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:var(--bg);font-weight:900;font-size:1.15rem;padding:20px 44px;border-radius:50px;text-decoration:none;box-shadow:0 0 50px rgba(79,255,176,0.4);animation:pulse-glow 2s infinite;">
           ▶ Apri Kiber AI adesso
         </a>
-        <p style="font-size:.78rem;color:var(--muted);margin-top:12px;">
-          📬 Il link è stato inviato anche a <span id="confirmed-email-survey" style="color:var(--accent);font-weight:700;"></span>
+        <p style="font-size:1rem;font-weight:700;color:var(--text);margin-top:16px;">
+          📬 Riceverai il link dell'app il prima possibile all'indirizzo <span id="confirmed-email-survey" style="color:var(--accent);"></span>
         </p>
-        <p style="font-size:.72rem;color:var(--muted);margin-top:4px;">Tra 2 giorni ti mandiamo 3 domande veloci — il tuo feedback ci aiuta a migliorare l'app.</p>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px;">Nel frattempo puoi già esplorare l'app qui sotto.</p>
       </div>
       <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 24px;">
         <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:2px;margin-bottom:24px;">// COSA CHIEDONO GLI ALTRI GENITORI</p>
@@ -1137,21 +1137,39 @@ function handleSurveyEmail() {
   submitSurvey();
 }
 
-function submitToGoogleForm(featuresStr, fearStr) {
+function submitToGoogleForm(featuresStr, fearStr, experiencesStr, managementStr, ageStr, emailStr) {
   const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSc44CWLLeU3_QDrjw3O-o3r-9OWQlH8cSeKvKP91MocBJcAoQ/formResponse';
-  const timestamp = new Date().toISOString();
+  const now = new Date();
+  const timestamp = now.toLocaleString('it-IT', {
+    timeZone: 'Europe/Rome',
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', second: '2-digit'
+  });
   const body = new URLSearchParams({
     'entry.137633840': featuresStr,
     'entry.216620271': fearStr,
     'entry.367396321': timestamp,
+    'entry.996417960': experiencesStr,
+    'entry.697755586': managementStr,
+    'entry.460692434': ageStr,
+    'entry.663494803': emailStr,
   });
   fetch(FORM_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body.toString() }).catch(()=>{});
 }
 
+function getLabel(list, id) {
+  const item = list.find(x => x.id === id);
+  return item ? item.label : id;
+}
+
 function submitSurvey() {
-  const featuresStr = Array.from(selectedFeatures).join(', ');
-  const fearStr = selectedFear || '';
-  submitToGoogleForm(featuresStr, fearStr);
+  const featuresStr = Array.from(selectedFeatures).map(id => getLabel(features, id)).join(', ');
+  const fearStr = selectedFear ? getLabel(fears, selectedFear) : '';
+  const experiencesStr = Array.from(selectedExperiences).map(id => getLabel(experiences, id)).join(', ');
+  const managementStr = selectedManagement ? getLabel(managements, selectedManagement) : '';
+  const ageStr = selectedAge ? getLabel(ages, selectedAge) : '';
+  const emailStr = document.getElementById('survey-email-input')?.value?.trim() || '';
+  submitToGoogleForm(featuresStr, fearStr, experiencesStr, managementStr, ageStr, emailStr);
 
   const totals = {...baseVotes};
   selectedFeatures.forEach(id => { if(totals[id]!==undefined) totals[id]++; });
