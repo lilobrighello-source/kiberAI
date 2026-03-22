@@ -1142,6 +1142,9 @@ function handleSurveyEmail() {
     setTimeout(()=>{input.style.borderColor='';input.placeholder='La tua email...';},2000); return;
   }
   document.getElementById('confirmed-email-survey').textContent=email;
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'survey_completed', { event_category: 'engagement', event_label: 'survey_completo' });
+  }
   submitSurvey();
 }
 
