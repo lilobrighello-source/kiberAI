@@ -530,6 +530,11 @@
   .footer-copy { font-size:.75rem; color:var(--muted); width:100%; text-align:center; margin-top:8px; }
 
   /* ─── ANIMATIONS ─── */
+  @keyframes pulse-glow {
+    0%,100%{ box-shadow:0 0 30px rgba(79,255,176,0.3); }
+    50%{ box-shadow:0 0 60px rgba(79,255,176,0.6); }
+  }
+
   @keyframes fadeUp {
     from { opacity:0; transform:translateY(24px); }
     to   { opacity:1; transform:translateY(0); }
@@ -591,14 +596,14 @@
   <a href="#" class="nav-logo">
     <span class="shield">🛡️</span> KIBER AI
   </a>
-  <a href="#beta" class="nav-cta">Unisciti alla Beta</a>
+  <a href="#vota" class="nav-cta">🚀 Accedi Gratis</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge">
     <span class="dot"></span>
-    BETA APERTA — GRATUITA PER I PRIMI 50
+    ACCESSO GRATUITO — PRIMI 50 POSTI DISPONIBILI
   </div>
 
   <h1>
@@ -607,11 +612,11 @@
   </h1>
 
   <p class="hero-sub">
-    Kiber AI è la piattaforma gamificata che insegna ai ragazzi <strong>10–15 anni</strong> a riconoscere e difendersi dai pericoli online — attraverso simulazioni realistiche, un companion AI e sfide progressive.
+    Kiber AI è l'app che insegna ai ragazzi <strong>10–15 anni</strong> a riconoscere e difendersi dai pericoli online — attraverso scenari interattivi, un assistente virtuale e sfide progressive.
   </p>
 
   <div class="hero-actions">
-    <a href="#beta" class="btn-primary">🚀 Accedi alla Beta Gratuita</a>
+    <a href="#vota" class="btn-primary">🚀 Accedi Gratis</a>
     <a href="#come-funziona" class="btn-ghost">▶ Come funziona</a>
   </div>
 
@@ -660,6 +665,7 @@
   </div>
 </div>
 
+
 <!-- HOW IT WORKS -->
 <section id="come-funziona">
   <div style="text-align:center; margin-bottom:52px;" class="reveal">
@@ -672,12 +678,12 @@
     <div class="how-card reveal" data-num="01">
       <div class="how-icon">🎮</div>
       <h3>Simulazioni interattive</h3>
-      <p>Phishing, deepfake, adescamento, truffe online — resi in scenari giocabili che replicano le situazioni reali.</p>
+      <p>Messaggi truffa, foto false create con l'AI, adescamento, truffe online — scenari interattivi che replicano situazioni reali.</p>
     </div>
     <div class="how-card reveal" data-num="02">
       <div class="how-icon">🤖</div>
-      <h3>Glitch, il tuo companion AI</h3>
-      <p>Un assistente personale che guida, sfida e festeggia ogni traguardo. Evolve con il ragazzo, sessione dopo sessione.</p>
+      <h3>Glitch, il tuo assistente virtuale</h3>
+      <p>Un personaggio digitale che guida, sfida e festeggia ogni traguardo. Cresce insieme al ragazzo, sessione dopo sessione.</p>
     </div>
     <div class="how-card reveal" data-num="03">
       <div class="how-icon">⚡</div>
@@ -686,8 +692,8 @@
     </div>
     <div class="how-card reveal" data-num="04">
       <div class="how-icon">📊</div>
-      <h3>Dashboard genitori</h3>
-      <p>Report in tempo reale su aree di forza e fragilità del proprio figlio. Alerts personalizzati per argomenti critici.</p>
+      <h3>Pannello per i genitori</h3>
+      <p>Una schermata dedicata che mostra i progressi del figlio e le aree su cui lavorare. Notifiche personalizzate sugli argomenti più delicati.</p>
     </div>
   </div>
 </section>
@@ -702,18 +708,18 @@
   <div class="threats-grid">
     <div class="threat-pill reveal">
       <span class="threat-icon">🎣</span>
-      <div class="threat-name">Phishing</div>
-      <div class="threat-sub">link e messaggi falsi</div>
+      <div class="threat-name">Messaggi truffa</div>
+      <div class="threat-sub">link falsi e SMS pericolosi</div>
     </div>
     <div class="threat-pill reveal">
       <span class="threat-icon">🤡</span>
-      <div class="threat-name">Deepfake</div>
-      <div class="threat-sub">video e immagini AI</div>
+      <div class="threat-name">Foto e video falsi</div>
+      <div class="threat-sub">immagini create con l'intelligenza artificiale</div>
     </div>
     <div class="threat-pill reveal">
       <span class="threat-icon">😈</span>
-      <div class="threat-name">Grooming</div>
-      <div class="threat-sub">adescamento online</div>
+      <div class="threat-name">Adescamento online</div>
+      <div class="threat-sub">adulti che fingono di essere amici</div>
     </div>
     <div class="threat-pill reveal">
       <span class="threat-icon">💬</span>
@@ -744,10 +750,10 @@
     <div class="audience-card kids reveal">
       <span class="audience-emoji">🧒</span>
       <h3>Per i ragazzi</h3>
-      <p>Un'app che sembra un gioco, ma costruisce vere competenze digitali. Ogni sessione li rende più forti online.</p>
+      <p>Un'app che sembra un gioco, ma insegna davvero come stare al sicuro online. Ogni sessione li rende più consapevoli e più forti.</p>
       <ul class="feature-list">
         <li>Simulazioni con scelte reali</li>
-        <li>Companion AI Glitch</li>
+        <li>Assistente virtuale Glitch</li>
         <li>Livelli, XP e badge</li>
         <li>Sfide giornaliere</li>
       </ul>
@@ -755,10 +761,10 @@
     <div class="audience-card parents reveal">
       <span class="audience-emoji">👪</span>
       <h3>Per i genitori</h3>
-      <p>Visibilità chiara sulle competenze del figlio, senza controllo ossessivo. Strumenti per parlarne insieme.</p>
+      <p>Sai sempre su cosa sta lavorando tuo figlio, senza spiarlo. Hai strumenti pratici per parlarne insieme a casa.</p>
       <ul class="feature-list yellow">
-        <li>Dashboard con radar chart</li>
-        <li>Alert tematici in tempo reale</li>
+        <li>Schermata con il profilo di sicurezza del figlio</li>
+        <li>Notifiche sui temi più delicati</li>
         <li>Consigli su come dialogare</li>
         <li>Report di progresso</li>
       </ul>
@@ -782,58 +788,146 @@
     <div style="text-align:center; margin-bottom:48px;" class="reveal">
       <span class="section-label">// COSTRUIAMOLA INSIEME</span>
       <h2 class="section-title">Tu sai meglio di noi<br>di cosa ha bisogno tuo figlio.</h2>
-      <p class="section-sub" style="margin:0 auto">Seleziona le funzionalità che ti sembrano più importanti. I risultati guideranno direttamente le prossime versioni di Kiber AI — il tuo voto conta davvero.</p>
+      <p class="section-sub" style="margin:0 auto">Rispondi a 5 domande veloci per sbloccare l'accesso gratuito all'app. Le tue risposte guidano direttamente lo sviluppo di Kiber AI.</p>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,209,102,0.1);border:1px solid rgba(255,209,102,0.3);border-radius:50px;padding:12px 22px;font-size:.95rem;font-weight:800;color:var(--accent3);margin-top:12px;">
+        🔓 Completa il questionario → ottieni accesso gratuito all'app
+      </div>
     </div>
 
-    <!-- STEP 1 -->
+    <!-- STEP 1: funzionalità -->
     <div id="survey-step-1" class="reveal">
-      <p style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:2px;margin-bottom:20px;text-align:center;">PASSO 1 / 2 — SELEZIONA FINO A 3 FUNZIONALITÀ</p>
-      <div id="feature-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:32px;"></div>
-      <div style="text-align:center;">
+      <p style="font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:20px;text-align:center;">PASSO 1 / 5 — COSA VORRESTI CHE TUO FIGLIO IMPARASSE?</p>
+      <p style="text-align:center;color:var(--muted);font-size:.88rem;margin-bottom:24px;">Seleziona fino a 3 funzionalità che ti sembrano più importanti.</p>
+      <div id="feature-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:20px;"></div>
+      <div style="margin-top:20px;background:transparent;border:none;padding:16px 0;text-align:center;">
+        <div>
+          <p style="font-size:1rem;font-weight:800;color:#ffd166;line-height:1.6;margin-bottom:6px;text-align:center;">73% dei ragazzi italiani usa internet ogni giorno. I genitori spesso non sanno cosa fanno online. <span style="color:#ffffff;font-size:1.1rem;display:block;margin-top:6px;">Il tuo potrebbe essere tra loro.</span></p>
+          <p style="font-size:.7rem;color:var(--muted);text-align:center;display:block;">Fonte: Save the Children 2024</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;">
         <button id="btn-next" class="btn-primary" onclick="goToStep2()" disabled style="opacity:.4;cursor:not-allowed;transition:all .3s;">Continua →</button>
       </div>
     </div>
 
-    <!-- STEP 2 -->
+    <!-- STEP 2: esperienza reale -->
     <div id="survey-step-2" style="display:none;">
-      <p style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:2px;margin-bottom:20px;text-align:center;">PASSO 2 / 2 — QUAL È LA TUA PREOCCUPAZIONE PRINCIPALE?</p>
-      <div id="fear-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:32px;"></div>
-      <div style="text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <p style="font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:20px;text-align:center;">PASSO 2 / 5 — TI È MAI CAPITATO CHE TUO FIGLIO...</p>
+      <p style="text-align:center;color:var(--muted);font-size:.88rem;margin-bottom:24px;">Seleziona tutto quello che si applica — anche se è successo una volta sola.</p>
+      <div id="experience-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:20px;"></div>
+      <div style="margin-top:20px;background:transparent;border:none;padding:16px 0;text-align:center;">
+        <div>
+          <p style="font-size:1rem;font-weight:800;color:#ffd166;line-height:1.6;margin-bottom:6px;text-align:center;">370 casi di adescamento in Italia nel 2024. Vittime tra 10 e 13 anni. Quasi sempre i genitori non sapevano nulla. <span style="color:#ffffff;font-size:1.1rem;display:block;margin-top:6px;">Tuo figlio potrebbe essere il prossimo.</span></p>
+          <p style="font-size:.7rem;color:var(--muted);text-align:center;display:block;">Fonte: Polizia Postale 2024</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
         <button class="btn-ghost" onclick="goToStep1()" style="font-size:.85rem;padding:12px 24px;">← Indietro</button>
-        <button id="btn-submit" class="btn-primary" onclick="submitSurvey()" disabled style="opacity:.4;cursor:not-allowed;transition:all .3s;">🛡️ Invia il mio voto</button>
+        <button id="btn-next-2" class="btn-primary" onclick="goToStep3()">Continua →</button>
       </div>
     </div>
 
-    <!-- RESULTS -->
+    <!-- STEP 3: paura principale -->
+    <div id="survey-step-3" style="display:none;">
+      <p style="font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:20px;text-align:center;">PASSO 3 / 5 — QUAL È LA TUA PREOCCUPAZIONE PRINCIPALE?</p>
+      <p style="text-align:center;color:var(--muted);font-size:.88rem;margin-bottom:24px;">Scegli quella che ti pesa di più.</p>
+      <div id="fear-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:20px;"></div>
+      <div style="margin-top:20px;background:transparent;border:none;padding:16px 0;text-align:center;">
+        <div>
+          <p style="font-size:1rem;font-weight:800;color:#ffd166;line-height:1.6;margin-bottom:6px;text-align:center;">1 ragazzo su 2 ha subito cyberbullismo. Nella maggior parte dei casi non lo dice ai genitori. <span style="color:#ffffff;font-size:1.1rem;display:block;margin-top:6px;">Tuo figlio potrebbe star soffrendo in silenzio adesso.</span></p>
+          <p style="font-size:.7rem;color:var(--muted);text-align:center;display:block;">Fonte: ESPAD Italia / CNR 2024</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-ghost" onclick="goToStep2()" style="font-size:.85rem;padding:12px 24px;">← Indietro</button>
+        <button id="btn-next-3" class="btn-primary" onclick="goToStep4()" disabled style="opacity:.4;cursor:not-allowed;transition:all .3s;">Continua →</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: come gestisci ora -->
+    <div id="survey-step-4" style="display:none;">
+      <p style="font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:20px;text-align:center;">PASSO 4 / 5 — COME GESTISCI LA SICUREZZA ONLINE ORA?</p>
+      <p style="text-align:center;color:var(--muted);font-size:.88rem;margin-bottom:24px;">Sii onesto/a — non c'è la risposta giusta.</p>
+      <div id="management-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:20px;"></div>
+      <div style="margin-top:20px;background:transparent;border:none;padding:16px 0;text-align:center;">
+        <div>
+          <p style="font-size:1rem;font-weight:800;color:#ffd166;line-height:1.6;margin-bottom:6px;text-align:center;">In Italia il primo smartphone arriva mediamente a 10 anni. <span style="color:#ffffff;font-size:1.1rem;display:block;margin-top:6px;">Quando arriverà il momento, tuo figlio sarà pronto?</span></p>
+          <p style="font-size:.7rem;color:var(--muted);text-align:center;display:block;">Fonte: MIMIT / Università Cattolica 2024</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-ghost" onclick="goToStep3()" style="font-size:.85rem;padding:12px 24px;">← Indietro</button>
+        <button id="btn-next-4" class="btn-primary" onclick="goToStep5()" disabled style="opacity:.4;cursor:not-allowed;transition:all .3s;">Continua →</button>
+      </div>
+    </div>
+
+    <!-- STEP 5: età figlio -->
+    <div id="survey-step-5" style="display:none;">
+      <p style="font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:20px;text-align:center;">PASSO 5 / 5 — QUANTI ANNI HA TUO FIGLIO?</p>
+      <p style="text-align:center;color:var(--muted);font-size:.88rem;margin-bottom:24px;">Ci aiuta a personalizzare i contenuti dell'app per la sua età.</p>
+      <div id="age-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px;"></div>
+      <div style="margin-top:20px;background:transparent;border:none;padding:16px 0;text-align:center;">
+        <div>
+          <p style="font-size:1rem;font-weight:800;color:#ffd166;line-height:1.6;margin-bottom:6px;text-align:center;">Violenza online tra 14-16 anni: +24% in un anno. I rischi crescono con l'età. <span style="color:#ffffff;font-size:1.1rem;display:block;margin-top:6px;">Ogni anno senza preparazione è un anno di esposizione.</span></p>
+          <p style="font-size:.7rem;color:var(--muted);text-align:center;display:block;">Fonte: Polizia Postale 2024</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-ghost" onclick="goToStep4()" style="font-size:.85rem;padding:12px 24px;">← Indietro</button>
+        <button id="btn-next-5" class="btn-primary" onclick="goToStepEmail()" disabled style="opacity:.4;cursor:not-allowed;transition:all .3s;">Continua →</button>
+      </div>
+    </div>
+
+    <!-- STEP EMAIL GATE -->
+    <div id="survey-step-email" style="display:none;">
+      <p style="font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:24px;text-align:center;">ULTIMO PASSAGGIO — SBLOCCA IL TUO ACCESSO GRATUITO</p>
+      <div style="background:var(--card);border:1px solid rgba(255,209,102,0.3);border-radius:20px;padding:32px 28px;text-align:center;max-width:560px;margin:0 auto;">
+        <div style="font-size:2.8rem;margin-bottom:14px;">🔓</div>
+        <h3 style="font-size:1.3rem;font-weight:900;margin-bottom:10px;">Ci siamo quasi.</h3>
+        <p style="color:var(--muted);font-size:.92rem;line-height:1.7;margin-bottom:24px;">Lascia la tua email per sbloccare l'accesso gratuito all'app e ricevere il link direttamente nella tua casella — così lo ritrovi quando vuoi.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:center;margin-bottom:16px;">
+          <input type="email" id="survey-email-input" class="email-input" style="width:100%;max-width:360px;" placeholder="La tua email...">
+          <button class="btn-primary" style="width:100%;max-width:360px;justify-content:center;" onclick="handleSurveyEmail()">🛡️ Sblocca accesso gratuito</button>
+        </div>
+        <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:8px;">
+          <span style="font-size:.75rem;color:var(--muted);">✓ Nessun pagamento</span>
+          <span style="font-size:.75rem;color:var(--muted);">✓ Nessuna installazione</span>
+          <span style="font-size:.75rem;color:var(--muted);">✓ Funziona su telefono</span>
+        </div>
+        <p style="font-size:.72rem;color:var(--muted);">Tra 2 giorni ti chiediamo 3 domande veloci sulla tua esperienza. Nessuno spam.</p>
+      </div>
+      <div style="text-align:center;margin-top:16px;">
+        <button class="btn-ghost" onclick="goToStep5()" style="font-size:.8rem;padding:10px 20px;">← Indietro</button>
+      </div>
+    </div>
+
+    <!-- RESULTS + LINK SBLOCCATO -->
     <div id="survey-results" style="display:none;">
       <div style="text-align:center;margin-bottom:36px;">
         <div style="font-size:3rem;margin-bottom:12px;">🎉</div>
-        <h3 style="font-size:1.4rem;font-weight:900;margin-bottom:8px;">Grazie! Il tuo contributo è stato registrato.</h3>
-        <p style="color:var(--muted);font-size:.9rem;line-height:1.6;">Ecco cosa chiedono gli altri genitori finora.<br>Queste priorità guidano il prossimo sprint di sviluppo.</p>
+        <h3 style="font-size:1.4rem;font-weight:900;margin-bottom:8px;">Grazie! Il tuo accesso è sbloccato.</h3>
+        <p style="color:var(--muted);font-size:.9rem;line-height:1.6;">Ecco cosa chiedono gli altri genitori finora.<br>Le vostre priorità guidano il prossimo aggiornamento dell'app.</p>
+      </div>
+      <div style="text-align:center;margin-bottom:40px;">
+        <a href="https://kiber-ai.lovable.app" target="_blank"
+          style="display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:var(--bg);font-weight:900;font-size:1.15rem;padding:20px 44px;border-radius:50px;text-decoration:none;box-shadow:0 0 50px rgba(79,255,176,0.4);animation:pulse-glow 2s infinite;">
+          ▶ Apri Kiber AI adesso
+        </a>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:12px;">
+          📬 Il link è stato inviato anche a <span id="confirmed-email-survey" style="color:var(--accent);font-weight:700;"></span>
+        </p>
+        <p style="font-size:.72rem;color:var(--muted);margin-top:4px;">Tra 2 giorni ti mandiamo 3 domande veloci — il tuo feedback ci aiuta a migliorare l'app.</p>
       </div>
       <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 24px;">
-        <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:2px;margin-bottom:24px;">// CLASSIFICA FUNZIONALITÀ — VOTI TOTALI</p>
+        <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:2px;margin-bottom:24px;">// COSA CHIEDONO GLI ALTRI GENITORI</p>
         <div id="results-bars"></div>
-      </div>
-      <div style="text-align:center;margin-top:32px;">
-        <a href="#beta" class="btn-primary">🚀 Entra nella beta gratuita</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section id="beta" class="cta-section">
-  <h2 class="reveal">Entra nella beta.<br><span>È gratis.</span></h2>
-  <p class="reveal">I primi 50 accedono gratuitamente a tutte le simulazioni.<br>Aiutaci a costruire il prodotto migliore per i tuoi figli.</p>
 
-  <div class="cta-input-row reveal">
-    <input type="email" class="email-input" placeholder="La tua email...">
-    <button class="btn-primary" onclick="handleSignup(this)">🛡️ Voglio accedere</button>
-  </div>
-  <p class="cta-note reveal">Nessuno spam. Nessuna carta di credito. Solo l'accesso alla beta.</p>
-</section>
 
 <!-- FOOTER -->
 <footer>
@@ -842,7 +936,6 @@
     <a href="#">Privacy Policy</a>
     <a href="#">GDPR & Minori</a>
     <a href="#">Contatti</a>
-    <a href="https://kiber-ai.lovable.app" target="_blank">Prova il MVP →</a>
   </div>
   <p class="footer-copy">© 2026 Kiber AI — Progetto avviato con il supporto di Unibo / PDAI · Bologna 🇮🇹</p>
 </footer>
@@ -862,102 +955,186 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 
 const features = [
-  { id:'phishing',   emoji:'🎣', label:'Simulazioni phishing',         desc:'Riconoscere link e messaggi falsi' },
-  { id:'grooming',   emoji:'😈', label:'Prevenire il grooming',         desc:'Identificare adulti pericolosi online' },
-  { id:'deepfake',   emoji:'🤡', label:'Smascherare i deepfake',        desc:'Distinguere video e immagini AI' },
-  { id:'bullismo',   emoji:'💬', label:'Gestire il cyberbullismo',      desc:'Come reagire, non subire' },
-  { id:'privacy',    emoji:'🔒', label:'Proteggere la privacy',         desc:'Dati personali e impostazioni profilo' },
-  { id:'truffe',     emoji:'💸', label:'Riconoscere le truffe online',  desc:'Acquisti falsi e scam' },
-  { id:'dashboard',  emoji:'📊', label:'Dashboard genitori',            desc:'Monitorare i progressi del figlio' },
-  { id:'dialogo',    emoji:'💡', label:'Guida al dialogo familiare',    desc:'Come parlarne insieme a casa' },
-  { id:'alert',      emoji:'🔔', label:'Alert in tempo reale',          desc:'Notifiche su aree di fragilità' },
+  { id:'messaggi',   emoji:'🎣', label:'Riconoscere messaggi truffa',    desc:'Link falsi, SMS pericolosi, email ingannevoli' },
+  { id:'grooming',   emoji:'😈', label:'Proteggersi dagli sconosciuti',  desc:'Riconoscere adulti che fingono di essere amici' },
+  { id:'deepfake',   emoji:'🤡', label:'Foto e video falsi creati con AI', desc:'Capire quando un\'immagine è stata manipolata' },
+  { id:'bullismo',   emoji:'💬', label:'Difendersi dal cyberbullismo',   desc:'Come reagire e non subire in silenzio' },
+  { id:'privacy',    emoji:'🔒', label:'Proteggere la privacy',          desc:'Dati personali e impostazioni profilo' },
+  { id:'truffe',     emoji:'💸', label:'Riconoscere le truffe online',   desc:'Acquisti falsi e scam' },
+  { id:'dashboard',  emoji:'📊', label:'Pannello per i genitori',        desc:'Seguire i progressi del figlio in tempo reale' },
+  { id:'dialogo',    emoji:'💡', label:'Come parlarne in famiglia',      desc:'Consigli pratici per affrontare il tema a casa' },
+  { id:'alert',      emoji:'🔔', label:'Notifiche per i genitori',       desc:'Avvisi quando il figlio affronta temi delicati' },
 ];
+
+const experiences = [
+  { id:'x_sconosciuti', emoji:'👤', label:'Ricevesse messaggi da sconosciuti senza dirtelo' },
+  { id:'x_link',        emoji:'🔗', label:'Cliccasse su un link sospetto o strano' },
+  { id:'x_domande',     emoji:'❓', label:'Ti chiedesse spiegazioni su qualcosa di inquietante visto online' },
+  { id:'x_app',         emoji:'📱', label:'Usasse app che non conosci o non approvi' },
+  { id:'x_offese',      emoji:'💬', label:'Subisse commenti offensivi o minacce online' },
+  { id:'x_niente',      emoji:'✅', label:'Niente di tutto questo, per ora' },
+];
+
 const fears = [
-  { id:'f_grooming',   emoji:'😨', label:'Essere avvicinato da sconosciuti' },
-  { id:'f_bullismo',   emoji:'😰', label:'Subire cyberbullismo' },
-  { id:'f_dipendenza', emoji:'📱', label:'Dipendenza dallo smartphone' },
-  { id:'f_privacy',    emoji:'🕵️', label:'Condividere dati personali' },
-  { id:'f_truffe',     emoji:'💳', label:'Cadere in truffe o acquisti falsi' },
-  { id:'f_contenuti',  emoji:'🚫', label:'Accedere a contenuti inappropriati' },
+  { id:'f_grooming',    emoji:'😨', label:'Essere contattato da sconosciuti pericolosi' },
+  { id:'f_bullismo',    emoji:'😰', label:'Subire offese o minacce online' },
+  { id:'f_dipendenza',  emoji:'📱', label:'Dipendenza dallo smartphone' },
+  { id:'f_privacy',     emoji:'🕵️', label:'Condividere dati personali senza saperlo' },
+  { id:'f_truffe',      emoji:'💳', label:'Cadere in truffe o acquisti falsi' },
+  { id:'f_contenuti',   emoji:'🚫', label:'Accedere a contenuti inappropriati' },
 ];
-const baseVotes = { phishing:12, grooming:18, deepfake:9, bullismo:15, privacy:11, truffe:7, dashboard:14, dialogo:8, alert:10 };
+
+const managements = [
+  { id:'m_dialogo',   emoji:'💬', label:'Ne parliamo ogni tanto in famiglia' },
+  { id:'m_controllo', emoji:'🔒', label:'Ho installato il controllo parentale' },
+  { id:'m_fiducia',   emoji:'🤝', label:'Mi fido di lui/lei, non ho strumenti specifici' },
+  { id:'m_perso',     emoji:'😅', label:'Onestamente non so da dove iniziare' },
+  { id:'m_nophone',   emoji:'📵', label:'Mio figlio non ha ancora uno smartphone' },
+];
+
+const ages = [
+  { id:'a_under8',  emoji:'🧸', label:'Meno di 8 anni' },
+  { id:'a_8_10',    emoji:'🎒', label:'8–10 anni' },
+  { id:'a_11_13',   emoji:'🎮', label:'11–13 anni' },
+  { id:'a_14_16',   emoji:'📱', label:'14–16 anni' },
+  { id:'a_over16',  emoji:'🎓', label:'Più di 16 anni' },
+];
+
+const baseVotes = { messaggi:12, grooming:18, deepfake:9, bullismo:15, privacy:11, truffe:7, dashboard:14, dialogo:8, alert:10 };
+
 let selectedFeatures = new Set();
+let selectedExperiences = new Set();
 let selectedFear = null;
+let selectedManagement = null;
+let selectedAge = null;
+
+function makeCard(id, emoji, label, desc, onclick, style) {
+  return '<div id="' + id + '" onclick="' + onclick + '" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 16px;cursor:pointer;transition:all .2s;user-select:none;' + (style||'') + '">' +
+    '<div style="font-size:1.8rem;margin-bottom:8px;">' + emoji + '</div>' +
+    '<div style="font-weight:800;font-size:.88rem;margin-bottom:4px;">' + label + '</div>' +
+    (desc ? '<div style="font-size:.75rem;color:var(--muted);line-height:1.4;">' + desc + '</div>' : '') +
+  '</div>';
+}
+
+function makeRowCard(id, emoji, label, onclick) {
+  return '<div id="' + id + '" onclick="' + onclick + '" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;cursor:pointer;transition:all .2s;user-select:none;display:flex;align-items:center;gap:12px;">' +
+    '<span style="font-size:1.6rem;flex-shrink:0;">' + emoji + '</span>' +
+    '<span style="font-weight:700;font-size:.88rem;">' + label + '</span>' +
+  '</div>';
+}
 
 function renderFeatureGrid() {
-  const grid = document.getElementById('feature-grid');
-  if (!grid) return;
-  grid.innerHTML = features.map(f => `
-    <div id="fc-${f.id}" onclick="toggleFeature('${f.id}')"
-      style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 16px;cursor:pointer;transition:all .2s;user-select:none;">
-      <div style="font-size:2rem;margin-bottom:10px;">${f.emoji}</div>
-      <div style="font-weight:800;font-size:.88rem;margin-bottom:4px;">${f.label}</div>
-      <div style="font-size:.75rem;color:var(--muted);line-height:1.4;">${f.desc}</div>
-    </div>
-  `).join('');
+  const g = document.getElementById('feature-grid');
+  if (!g) return;
+  g.innerHTML = features.map(f => makeCard('fc-'+f.id, f.emoji, f.label, f.desc, "toggleFeature('"+f.id+"')", '')).join('');
+}
+
+function renderExperienceGrid() {
+  const g = document.getElementById('experience-grid');
+  if (!g) return;
+  g.innerHTML = experiences.map(f => makeRowCard('xp-'+f.id, f.emoji, f.label, "toggleExperience('"+f.id+"')")).join('');
 }
 
 function renderFearGrid() {
-  const grid = document.getElementById('fear-grid');
-  if (!grid) return;
-  grid.innerHTML = fears.map(f => `
-    <div id="fear-${f.id}" onclick="selectFear('${f.id}')"
-      style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 16px;cursor:pointer;transition:all .2s;user-select:none;display:flex;align-items:center;gap:12px;">
-      <span style="font-size:1.8rem;">${f.emoji}</span>
-      <span style="font-weight:700;font-size:.88rem;">${f.label}</span>
-    </div>
-  `).join('');
+  const g = document.getElementById('fear-grid');
+  if (!g) return;
+  g.innerHTML = fears.map(f => makeRowCard('fear-'+f.id, f.emoji, f.label, "selectFear('"+f.id+"')")).join('');
+}
+
+function renderManagementGrid() {
+  const g = document.getElementById('management-grid');
+  if (!g) return;
+  g.innerHTML = managements.map(f => makeRowCard('mgmt-'+f.id, f.emoji, f.label, "selectManagement('"+f.id+"')")).join('');
+}
+
+function renderAgeGrid() {
+  const g = document.getElementById('age-grid');
+  if (!g) return;
+  g.innerHTML = ages.map(f => makeCard('age-'+f.id, f.emoji, f.label, '', "selectAge('"+f.id+"')", '')).join('');
 }
 
 function toggleFeature(id) {
-  const card = document.getElementById('fc-' + id);
+  const card = document.getElementById('fc-'+id);
   if (selectedFeatures.has(id)) {
     selectedFeatures.delete(id);
-    card.style.borderColor = 'var(--border)';
-    card.style.background = 'var(--card)';
-    card.style.transform = 'none';
-    card.style.boxShadow = 'none';
+    card.style.borderColor='var(--border)'; card.style.background='var(--card)'; card.style.transform='none'; card.style.boxShadow='none';
   } else {
-    if (selectedFeatures.size >= 3) {
-      card.animate([{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'none'}], {duration:200});
-      return;
-    }
+    if (selectedFeatures.size >= 3) { card.animate([{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'none'}],{duration:200}); return; }
     selectedFeatures.add(id);
-    card.style.borderColor = 'var(--accent)';
-    card.style.background = 'rgba(79,255,176,0.07)';
-    card.style.transform = 'translateY(-3px)';
-    card.style.boxShadow = '0 6px 20px rgba(79,255,176,0.15)';
+    card.style.borderColor='var(--accent)'; card.style.background='rgba(79,255,176,0.07)'; card.style.transform='translateY(-3px)'; card.style.boxShadow='0 6px 20px rgba(79,255,176,0.15)';
   }
   const count = selectedFeatures.size;
   const btn = document.getElementById('btn-next');
-  btn.disabled = count === 0;
-  btn.style.opacity = count > 0 ? '1' : '.4';
-  btn.style.cursor = count > 0 ? 'pointer' : 'not-allowed';
-  btn.textContent = count > 0 ? 'Continua con ' + count + ' scelt' + (count===1?'a':'e') + ' →' : 'Continua →';
+  btn.disabled = count===0; btn.style.opacity=count>0?'1':'.4'; btn.style.cursor=count>0?'pointer':'not-allowed';
+  btn.textContent = count>0 ? 'Continua con '+count+' scelt'+(count===1?'a':'e')+' →' : 'Continua →';
+}
+
+function toggleExperience(id) {
+  const card = document.getElementById('xp-'+id);
+  if (id === 'x_niente') {
+    selectedExperiences.clear();
+    document.querySelectorAll('[id^="xp-"]').forEach(el => { el.style.borderColor='var(--border)'; el.style.background='var(--card)'; });
+    selectedExperiences.add(id);
+    card.style.borderColor='var(--accent)'; card.style.background='rgba(79,255,176,0.07)';
+  } else {
+    const niente = document.getElementById('xp-x_niente');
+    if (niente) { selectedExperiences.delete('x_niente'); niente.style.borderColor='var(--border)'; niente.style.background='var(--card)'; }
+    if (selectedExperiences.has(id)) {
+      selectedExperiences.delete(id); card.style.borderColor='var(--border)'; card.style.background='var(--card)';
+    } else {
+      selectedExperiences.add(id); card.style.borderColor='var(--accent4)'; card.style.background='rgba(116,185,255,0.07)';
+    }
+  }
 }
 
 function selectFear(id) {
-  if (selectedFear) {
-    const prev = document.getElementById('fear-' + selectedFear);
-    if (prev) { prev.style.borderColor='var(--border)'; prev.style.background='var(--card)'; }
+  if (selectedFear) { const p=document.getElementById('fear-'+selectedFear); if(p){p.style.borderColor='var(--border)';p.style.background='var(--card)';} }
+  selectedFear=id;
+  const card=document.getElementById('fear-'+id); card.style.borderColor='var(--accent3)'; card.style.background='rgba(255,209,102,0.08)';
+  const btn=document.getElementById('btn-next-3'); btn.disabled=false; btn.style.opacity='1'; btn.style.cursor='pointer';
+}
+
+function selectManagement(id) {
+  if (selectedManagement) { const p=document.getElementById('mgmt-'+selectedManagement); if(p){p.style.borderColor='var(--border)';p.style.background='var(--card)';} }
+  selectedManagement=id;
+  const card=document.getElementById('mgmt-'+id); card.style.borderColor='var(--accent)'; card.style.background='rgba(79,255,176,0.07)';
+  const btn=document.getElementById('btn-next-4'); btn.disabled=false; btn.style.opacity='1'; btn.style.cursor='pointer';
+}
+
+function selectAge(id) {
+  if (selectedAge) { const p=document.getElementById('age-'+selectedAge); if(p){p.style.borderColor='var(--border)';p.style.background='var(--card)';p.style.transform='none';} }
+  selectedAge=id;
+  const card=document.getElementById('age-'+id); card.style.borderColor='var(--accent)'; card.style.background='rgba(79,255,176,0.07)'; card.style.transform='translateY(-3px)';
+  const btn=document.getElementById('btn-next-5'); btn.disabled=false; btn.style.opacity='1'; btn.style.cursor='pointer';
+}
+
+function scrollToVota() { window.scrollTo({top:document.getElementById('vota').offsetTop-80,behavior:'smooth'}); }
+
+function showOnly(id) {
+  ['survey-step-1','survey-step-2','survey-step-3','survey-step-4','survey-step-5','survey-step-email','survey-results'].forEach(s => {
+    const el=document.getElementById(s); if(el) el.style.display='none';
+  });
+  const el=document.getElementById(id); if(el) el.style.display='block';
+  scrollToVota();
+}
+
+function goToStep1() { showOnly('survey-step-1'); }
+function goToStep2() { showOnly('survey-step-2'); }
+function goToStep3() { showOnly('survey-step-3'); }
+function goToStep4() { showOnly('survey-step-4'); }
+function goToStep5() { showOnly('survey-step-5'); }
+function goToStepEmail() { showOnly('survey-step-email'); }
+function goToStep2FromEmail() { showOnly('survey-step-2'); }
+
+function handleSurveyEmail() {
+  const input=document.getElementById('survey-email-input');
+  const email=input.value.trim();
+  if (!email||!email.includes('@')) {
+    input.style.borderColor='var(--accent2)'; input.placeholder='Inserisci una email valida';
+    setTimeout(()=>{input.style.borderColor='';input.placeholder='La tua email...';},2000); return;
   }
-  selectedFear = id;
-  const card = document.getElementById('fear-' + id);
-  card.style.borderColor = 'var(--accent3)';
-  card.style.background = 'rgba(255,209,102,0.08)';
-  const btn = document.getElementById('btn-submit');
-  btn.disabled = false; btn.style.opacity='1'; btn.style.cursor='pointer';
-}
-
-function goToStep2() {
-  document.getElementById('survey-step-1').style.display = 'none';
-  document.getElementById('survey-step-2').style.display = 'block';
-  window.scrollTo({top: document.getElementById('vota').offsetTop - 80, behavior:'smooth'});
-}
-
-function goToStep1() {
-  document.getElementById('survey-step-2').style.display = 'none';
-  document.getElementById('survey-step-1').style.display = 'block';
+  document.getElementById('confirmed-email-survey').textContent=email;
+  submitSurvey();
 }
 
 function submitToGoogleForm(featuresStr, fearStr) {
@@ -968,63 +1145,48 @@ function submitToGoogleForm(featuresStr, fearStr) {
     'entry.216620271': fearStr,
     'entry.367396321': timestamp,
   });
-  fetch(FORM_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: body.toString()
-  }).catch(() => {}); // silently ignore CORS error — submission goes through anyway
+  fetch(FORM_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body.toString() }).catch(()=>{});
 }
 
 function submitSurvey() {
   const featuresStr = Array.from(selectedFeatures).join(', ');
   const fearStr = selectedFear || '';
-
   submitToGoogleForm(featuresStr, fearStr);
 
   const totals = {...baseVotes};
-  selectedFeatures.forEach(id => { if (totals[id] !== undefined) totals[id]++; });
-  const sorted = features.map(f => ({...f, votes: totals[f.id]||0})).sort((a,b)=>b.votes-a.votes);
+  selectedFeatures.forEach(id => { if(totals[id]!==undefined) totals[id]++; });
+  const sorted = features.map(f=>({...f,votes:totals[f.id]||0})).sort((a,b)=>b.votes-a.votes);
   const max = sorted[0].votes;
-  document.getElementById('results-bars').innerHTML = sorted.map((f, i) => {
-    const isVoted = selectedFeatures.has(f.id);
-    const barColor = i===0 ? 'linear-gradient(90deg,var(--accent),var(--accent4))' : isVoted ? 'rgba(79,255,176,0.6)' : 'rgba(79,255,176,0.25)';
-    const badge = isVoted ? ' <span style="font-size:.6rem;color:var(--accent);font-family:monospace;background:rgba(79,255,176,0.1);border-radius:4px;padding:2px 6px;">TUO VOTO</span>' : '';
-    return '<div style="margin-bottom:20px;">' +
-      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">' +
-        '<span style="font-size:.85rem;font-weight:' + (isVoted?900:700) + ';color:' + (isVoted?'var(--accent)':'var(--text)') + ';">' + f.emoji + ' ' + f.label + badge + '</span>' +
-        '<span style="font-family:monospace;font-size:.72rem;color:var(--muted);">' + f.votes + ' voti</span>' +
-      '</div>' +
-      '<div style="background:rgba(255,255,255,0.06);border-radius:50px;height:9px;overflow:hidden;">' +
-        '<div style="height:100%;width:0;border-radius:50px;background:' + barColor + ';transition:width .8s ' + (i*0.07) + 's ease;" data-w="' + Math.round(f.votes/max*100) + '%"></div>' +
+
+  document.getElementById('results-bars').innerHTML = sorted.map((f,i)=>{
+    const isVoted=selectedFeatures.has(f.id);
+    const barColor=i===0?'linear-gradient(90deg,var(--accent),var(--accent4))':isVoted?'rgba(79,255,176,0.6)':'rgba(79,255,176,0.25)';
+    const badge=isVoted?' <span style="font-size:.6rem;color:var(--accent);font-family:monospace;background:rgba(79,255,176,0.1);border-radius:4px;padding:2px 6px;">TUO VOTO</span>':'';
+    return '<div style="margin-bottom:20px;">'+
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">'+
+        '<span style="font-size:.85rem;font-weight:'+(isVoted?900:700)+';color:'+(isVoted?'var(--accent)':'var(--text)')+';">'+f.emoji+' '+f.label+badge+'</span>'+
+        '<span style="font-family:monospace;font-size:.72rem;color:var(--muted);">'+f.votes+' voti</span>'+
+      '</div>'+
+      '<div style="background:rgba(255,255,255,0.06);border-radius:50px;height:9px;overflow:hidden;">'+
+        '<div style="height:100%;width:0;border-radius:50px;background:'+barColor+';transition:width .8s '+(i*0.07)+'s ease;" data-w="'+Math.round(f.votes/max*100)+'%"></div>'+
       '</div></div>';
   }).join('');
-  document.getElementById('survey-step-2').style.display = 'none';
-  document.getElementById('survey-results').style.display = 'block';
-  window.scrollTo({top: document.getElementById('vota').offsetTop - 80, behavior:'smooth'});
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    document.querySelectorAll('#results-bars [data-w]').forEach(el => { el.style.width = el.dataset.w; });
+
+  showOnly('survey-results');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.querySelectorAll('#results-bars [data-w]').forEach(el=>{el.style.width=el.dataset.w;});
   }));
 }
 
 renderFeatureGrid();
+renderExperienceGrid();
 renderFearGrid();
-function handleSignup(btn) {
-  const input = btn.previousElementSibling;
-  const email = input.value.trim();
-  if (!email || !email.includes('@')) {
-    input.style.borderColor = 'var(--accent2)';
-    input.placeholder = 'Inserisci una email valida';
-    setTimeout(() => { input.style.borderColor = ''; input.placeholder = 'La tua email...'; }, 2000);
-    return;
-  }
-  btn.textContent = '✅ Iscritto!';
-  btn.style.background = '#2ecc71';
-  input.value = '';
-  input.placeholder = 'Grazie! Ti contatteremo presto.';
-  input.disabled = true;
-  btn.disabled = true;
-}
+renderManagementGrid();
+renderAgeGrid();
+renderExperienceGrid();
+renderManagementGrid();
+renderAgeGrid();
+
 </script>
 </body>
 </html>
