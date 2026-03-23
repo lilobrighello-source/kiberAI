@@ -1196,13 +1196,8 @@ function selectTest(id) {
   selTest=id; document.getElementById('rc-'+id).classList.add('selected');
   const btn=document.getElementById('btn-s6');
   btn.classList.add('active');
-  if (id==='t_no') {
-    btn.textContent = 'Invia →';
-    btn.onclick = ()=>submitAll(true);
-  } else {
-    btn.textContent = 'Continua →';
-    btn.onclick = ()=>goToEmail();
-  }
+  btn.textContent = 'Continua →';
+  btn.onclick = ()=>goToEmail();
 }
 
 // Navigation
