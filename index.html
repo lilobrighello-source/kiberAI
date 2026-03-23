@@ -1214,7 +1214,11 @@ function showStep(id) {
     const el=document.getElementById(s); if(el) el.style.display='none';
   });
   const el=document.getElementById(id); if(el) el.style.display='block';
-  window.scrollTo({top:document.getElementById('survey').offsetTop-80, behavior:'smooth'});
+  const activeStep = document.getElementById(id);
+  if (activeStep) {
+    const top = activeStep.getBoundingClientRect().top + window.scrollY - 100;
+    window.scrollTo({top: top, behavior:'smooth'});
+  }
 }
 
 function goTo(n) {
